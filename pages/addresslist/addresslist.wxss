@@ -1,0 +1,102 @@
+page{
+  padding: 25rpx;
+  background: #F5F5F5;
+  padding-bottom: 200rpx;
+}
+.address-search{
+  width: 100%;
+  position: fixed;
+  top: 0;left: 0;
+  z-index: 100;
+  padding: 25rpx;
+  background: #fff;
+  justify-content: space-between;
+}
+.search-input{
+  width: 88%;
+  background: #F3F3F3;
+  border-radius: 50rpx;
+  padding: 10rpx 20rpx;
+}
+.search-input input{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.addresslist{
+  margin-top: 120rpx;
+}
+.addressitem{
+  width: 100%;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 35rpx;
+  margin-bottom: 25rpx;
+}
+.infomsg{
+  color: #606060;
+}
+.addressmsg{
+  margin-top: 18rpx;
+  color: #B2B2B2;
+}
+.addresssel{
+  margin-top: 30rpx;
+  border-top: 1rpx solid #F5F5F5;
+  padding-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sel-checkout{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #8E8E8E;
+}
+.sel-checkout text:first-child{
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  border: 1rpx solid #D8D8D8;
+  margin-right: 16rpx;
+}
+.sel-checkout icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+.operationbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.operationbox view{
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 30rpx;
+  color: #8E8E8E;
+  margin-left: 25rpx;
+}
+.operationbox view image{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 15rpx;
+}
+.addressadd{
+  width: 80%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 80rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F06261;
+  line-height: 90rpx;
+  border-radius: 50rpx;
+  font-size: 30rox;
+  color: #fff;
+  text-align: center;
+  z-index: 100;
+}

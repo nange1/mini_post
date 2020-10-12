@@ -1,0 +1,14 @@
+<view class="outside">
+  <view class="groups borbot flexbet font28 infomsg">
+    <view class="groups-tit">快递公司</view>
+    <picker mode="selector" value="{{comp}}" range="{{complist}}" class="picker" bindchange="selcomp">
+      <view class="{{comp!==''?'empty':''}}">{{comp!==''?complist[comp].title:'请选择快递公司'}}</view>
+    </picker>
+  </view>
+  <form catchsubmit="formSubmit">
+    <view class="form-item">
+      <input type="text" name="ordernum" placeholder="请输入运单号查询"></input>
+      <button class="submitbtn" formType="submit" style="width:160rpx;margin: 0;">查询</button>
+    </view>
+  </form>
+</view>

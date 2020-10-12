@@ -1,0 +1,40 @@
+.userInfo{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #E8E8E8;
+}
+.userinfo-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.lists-item{
+  padding: 25rpx;
+  font-size: 28rpx;
+  color: #5A5A5A;
+  border-bottom: 1rpx solid #E8E8E8;
+  position: relative;
+}
+.lists-item::after{
+  content: '';
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 2rpx solid #5A5A5A;
+  border-right: 2rpx solid #5A5A5A;
+  position: absolute;
+  top: 50%;
+  right: 25rpx;
+  transform: translateY(-50%) rotate(45deg);
+}
+.lists-item button.btn{
+  padding: 0;
+  margin: 0;
+  font-size: 28rpx;
+  color: #5A5A5A;
+  background: transparent;
+  text-align: left;
+  width: 100vw;
+  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
+}

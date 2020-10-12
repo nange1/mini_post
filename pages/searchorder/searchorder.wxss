@@ -1,0 +1,95 @@
+page{
+  background: #F5F5F5;
+}
+.outside{
+  padding: 300rpx 0;
+}
+.form-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+.form-item input{
+  width: 510rpx;
+  background: #fff;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #212121;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+button{
+  padding: 0;
+  margin: 0;            
+}
+button::after {
+  border: none;
+  padding: 0;
+  margin: 0;  
+}
+button.submitbtn{
+  width: 120rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+  background: #F06261;
+}
+.infomsg{
+  background: #fff;
+  padding: 0 25rpx;
+  border-radius: 16rpx;
+  margin-bottom: 25rpx;
+}
+.infomsg-tem{
+  width: 100%;
+  justify-content: space-between;
+}
+.infomsg-tem-tit{
+  width: 45rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border-radius: 6rpx;
+  margin-right: 25rpx;
+}
+.infomsg-tem-info{
+  flex: 1;
+  justify-content: space-between;
+  padding: 25rpx 0;
+}
+.groups{
+  padding: 25rpx;
+  width: 92%;
+  margin: 0 auto;
+  margin-bottom: 25rpx;
+}
+.groups view{
+  color: #AFAEB3;
+}
+.groups view:last-child{
+  text-align: right;
+  padding-right: 26rpx;
+  position: relative;
+}
+.groups view:last-child::after{
+  content: '';
+  width: 16rpx;
+  height: 16rpx;
+  border-top: 2rpx solid #AFAEB3;
+  border-right: 2rpx solid #AFAEB3;
+  position: absolute;
+  top: 50%;right: 0;
+  transform: translateY(-50%) rotate(45deg);
+}
+.groups view.empty{
+  color: #212121;
+}
+.picker{
+  flex: 1;
+}

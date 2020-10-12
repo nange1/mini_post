@@ -1,0 +1,27 @@
+<view class="tablist">
+  <scroll-view scroll-x class="scrolls">
+    <view class="{{tabdex === item.id ? 'active' : ''}}" wx:for="{{tablist}}" wx:key="index" bindtap="orderclick"
+      data-i="{{item.id}}">{{item.text}}</view>
+  </scroll-view>
+</view>
+<view class="orderlist">
+  <view class="order-item" wx:for="{{orderlist}}" wx:key="d" bindtap="orderdetail" data-id="{{item.order_id}}">
+    <view class="number font24">运单号：{{item.order_num}}</view>
+    <view class="order-address">
+      <view class="order-people">
+        <view class="font32">{{item.from_address}}</view>
+        <view class="font24">{{item.from_name}}</view>
+      </view>
+      <view class="order-arrow">
+        <image src="../images/arrow.png"></image>
+        <view class="order-type font28"></view>
+      </view>
+      <view class="order-people">
+        <view class="font32">{{item.to_address}}</view>
+        <view class="font24">{{item.to_name}}</view>
+      </view>
+    </view>
+    <view class="ordermsg font28">快递公司：{{item.poster_type}}</view>
+    <view class="ordermsg font28">签收时间：{{item.appointment_time}}</view>
+  </view>
+</view>

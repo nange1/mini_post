@@ -1,0 +1,13 @@
+<view class="forms">
+  <form action="" catchsubmit="formSubmit">
+    <view class="form-group">
+      <input class="tellinput font28" type="number" name="tell" placeholder="请填写手机号" bindinput="gettell"/>
+    </view>
+    <view class="form-group-cord flexbet">
+      <input class="authorder font28" type="number" name="authorder" placeholder="请填写验证码" />
+      <view class="authorderbtn font28" bindtap="getcode" wx:if="{{!ifcode}}">获取验证码</view>
+      <view class="authorderbtn font28" wx:else>{{num}}后重新获取</view>
+    </view>
+		<button form-type="submit" class="savebtn" style="width:600rpx">登录</button>
+  </form>
+</view>

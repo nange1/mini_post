@@ -1,0 +1,15 @@
+<view class="forms">
+  <form action="" catchsubmit="formSubmit">
+    <view class="form-group">
+      <view>真实姓名</view>
+      <input type="text" name="uname" placeholder="请填写真实姓名" />
+    </view>
+    <view class="form-group">
+      <view>身份证号</view>
+      <input type="number" name="idcard" placeholder="请填写身份证号" />
+    </view>
+    <view class="form-group">
+      <button form-type="submit" class="savebtn" style="width:600rpx">去认证</button>
+    </view>
+  </form>
+</view>

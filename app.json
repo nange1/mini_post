@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/my/my",
+    "pages/authentication/authentication",
+    "pages/orderlist/orderlist",
+    "pages/searchorder/searchorder",
+    "pages/orderdetail/orderdetail",
+    "pages/addresslist/addresslist",
+    "pages/newadded/newadded",
+    "pages/orderInfo/orderInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F06261",
+    "navigationBarTitleText": "省省快递",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#292C33",
+    "selectedColor": "#F06261",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "寄快递",
+        "iconPath": "pages/images/tab01.png",
+        "selectedIconPath": "pages/images/tab1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "pages/images/tab02.png",
+        "selectedIconPath": "pages/images/tab2.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

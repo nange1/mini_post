@@ -1,0 +1,44 @@
+page{
+  padding: 100rpx;
+}
+.form-group{
+  width: 100%;
+  border: 1rpx solid #f5f5f5;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 50rpx;
+}
+.form-group .tellinput{
+  color: #212121;
+}
+.form-group-cord{
+  width: 100%;
+  justify-content: space-between;
+}
+.authorder{
+  width: 50%;
+  border: 1rpx solid #f5f5f5;
+  border-radius: 16rpx;
+  padding: 0 20rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+}
+.authorderbtn{
+  width: 210rpx;
+  color: #fff;
+  background: #F06261;
+  text-align: center;
+  padding: 25rpx 0;
+  border-radius: 16rpx;
+}
+.savebtn{
+  width: 80%;
+  background: #F06261;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+  margin: 0;
+  margin-top: 120rpx;
+}

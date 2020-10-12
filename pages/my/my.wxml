@@ -1,0 +1,12 @@
+<view class="userInfo flexbet">
+  <image src="../images/moren.png" mode="cover" class="userinfo-avatar"></image>
+  <view class="font28">17635337512</view>
+</view>
+<view class="lists">
+  <view class="lists-item" bindtap="orderlist">我的订单</view>
+  <view class="lists-item" bindtap="searchorder">查快递</view>
+  <view class="lists-item"><button class="btn" bindtap="tellphont">联系客服</button></view>
+  <view class="lists-item" bindtap="authentication">实名认证</view>
+  <view class="lists-item" bindtap="addresslist">我的地址库</view>
+  <view class="lists-item" bindtap="exit">退出登录</view>
+</view>

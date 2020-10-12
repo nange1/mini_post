@@ -1,0 +1,32 @@
+<form action="" bindsubmit="newadd">
+  <view class="groups borbot flexbet font28 infomsg">
+    <view class="groups-tit">联系人</view>
+    <view class="picker">
+      <input type="text" placeholder="请输入姓名" name="uname" value="{{uname}}"/>
+    </view>
+  </view>
+  <view class="groups borbot flexbet font28 infomsg">
+    <view class="groups-tit">手机号</view>
+    <view class="picker">
+      <input type="number" placeholder="请输入手机号" name="tell" value="{{tell}}"/>
+    </view>
+  </view>
+  <view class="groups borbot flexbet font28 infomsg" bindtap="location">
+    <view class="groups-tit">选择地址</view>
+    <view class="picker">
+      <view class="citys" wx:if="{{address===''}}"><text>请选择城市</text><image src="../images/citys.png"></image></view>
+      <view wx:else class="addresstext">{{address}}</view>
+    </view>
+  </view>
+  <view class="groups borbot flexbet font28 infomsg">
+    <view class="groups-tit">详细地址</view>
+    <view class="picker">
+      <input type="text" placeholder="请输入详细地址，如 **单元**号" name="detailaddress" value="{{detailaddress}}"/>
+    </view>
+  </view>
+  <view class="issave">
+    <text>是否保存到地址库</text>
+    <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+  </view>
+  <view><button class="savebtn" form-type="submit" style="width:600rpx">确认</button></view>
+</form>

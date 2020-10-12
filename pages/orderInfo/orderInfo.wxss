@@ -1,0 +1,39 @@
+page{
+  background: #f5f5f5;
+}
+.infobox,.msg{
+  background: #fff;
+  padding: 25rpx;
+  margin-bottom: 25rpx;
+}
+.info-title{
+  font-size: 32rpx;
+  color: #212121;
+}
+.info-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+  margin-top: 25rpx;
+}
+.info-item view:first-child{
+  color: #AFAEB3;
+}
+.info-item view:last-child{
+  color: #414141;
+}
+.msg .info-item{
+  margin-top: 0;
+}
+.btn{
+  width: 80%;
+  background: #F06261;
+  margin: 100rpx auto 0;
+  text-align: center;
+  border-radius: 50rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+}

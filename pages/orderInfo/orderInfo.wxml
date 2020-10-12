@@ -1,0 +1,49 @@
+<view class="infobox">
+  <view class="info-title">寄件人信息</view>
+  <view class="info-item">
+    <view>姓名</view>
+    <view>{{orderInfo.from_name}}</view>
+  </view>
+  <view class="info-item">
+    <view>电话</view>
+    <view>{{orderInfo.from_phone}}</view>
+  </view>
+  <view class="info-item">
+    <view>地址</view>
+    <view>{{orderInfo.from_address}}</view>
+  </view>
+</view>
+<view class="infobox">
+  <view class="info-title">收件人信息</view>
+  <view class="info-item">
+    <view>姓名</view>
+    <view>{{orderInfo.to_name}}</view>
+  </view>
+  <view class="info-item">
+    <view>电话</view>
+    <view>{{orderInfo.to_phone}}</view>
+  </view>
+  <view class="info-item">
+    <view>地址</view>
+    <view>{{orderInfo.to_address}}</view>
+  </view>
+</view>
+<view class="msg">
+  <view class="info-item">
+    <view>快递公司</view>
+    <view>{{orderInfo.poster_type}}快递</view>
+  </view>
+</view>
+<view class="msg">
+  <view class="info-item">
+    <view>快递单号</view>
+    <view>{{orderInfo.order_num}}</view>
+  </view>
+</view>
+<view class="msg">
+  <view class="info-item">
+    <view>物品信息</view>
+    <view>{{orderInfo.package_name}} {{orderInfo.weight}}公斤</view>
+  </view>
+</view>
+<view class="btn" bindtap="getdetail" data-num="{{orderInfo.poster_num}}">查看物流</view>

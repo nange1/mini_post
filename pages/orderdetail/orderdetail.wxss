@@ -1,0 +1,79 @@
+page{
+  background: #f5f5f5;
+}
+.white{
+  width: 100%;
+  background: #fff;
+  padding: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25rpx;
+}
+.company{
+  color: #F06261;
+  margin-bottom: 6rpx;
+}
+.imgs{
+  width: 65rpx;
+  height: 65rpx;
+  margin-right: 25rpx;
+}
+.package{
+  flex: 1;
+}
+.calltell{
+  padding: 16rpx 30rpx;
+  border: 1rpx solid #9C9C9C;
+  color: #444444;
+  border-radius: 10rpx;
+}
+.steplist{
+  width: 100%;
+  background: #fff;
+  padding: 25rpx;
+}
+.steps{
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+.steps:last-child{
+  padding-bottom: 0;
+}
+.steps-left{
+  width: 200rpx;
+  text-align: center;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+.steps-right{
+  flex: 1;
+  position: relative;
+}
+.line{
+  margin-right: 25rpx;
+  border-right: 2rpx solid #EAEAEA;
+  position: absolute;
+  left: 200rpx;
+  top: 15rpx;
+  height: 100%;
+}
+.steps-right{
+  padding-left: 25rpx;
+}
+.steps-right view{
+  width: 18rpx;
+  height: 18rpx;
+  background: #CECECE;
+  border-radius: 50%;
+  position: absolute;
+  top: 15rpx;left: -8rpx;
+}
+view.big{
+  width: 21rpx;
+  height: 21rpx;
+  background: #F06261;
+  left: -10rpx;
+}

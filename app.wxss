@@ -1,0 +1,32 @@
+page,view,text,textarea,image,form,input{
+  box-sizing: border-box;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+.flexbet{
+  display: flex;
+  align-items: center;
+}
+.padd{
+  padding: 24rpx;
+}
+.font24{
+  font-size: 24rpx;
+}
+.font26{
+  font-size: 26rpx;
+}
+.font28{
+  font-size: 28rpx;
+}
+.font30{
+  font-size: 30rpx;
+}
+.font32{
+  font-size: 32rpx;
+}
+.borbot{
+  border-bottom: 1rpx solid #F5F5F5;
+}

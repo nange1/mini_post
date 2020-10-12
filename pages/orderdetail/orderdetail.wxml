@@ -1,0 +1,27 @@
+<view class="white flexbet">
+  <view class="imgs"><image src="../images/tab02.png"></image></view>
+  <view class="package font28">
+    <view class="company font30">{{infomsg.com}}快递</view>
+    <view class="packagenum">运单号：{{infomsg.nu}}</view>
+  </view>
+</view>
+<!-- <view class="white flexbet font28">
+  <view class="courier flexbet">
+    <view class="imgs" style="width: 55rpx;height: 55rpx;"><image src="../images/myimg.png"></image></view>
+    <view class="packagenum">快递员：张某某</view>
+  </view>
+  <view class="calltell font28" bindtap="calltell">拨打电话</view>
+</view> -->
+<view class="steplist">
+  <view class="steps flexbet" wx:for="{{infomsg.data}}" wx:key="s">
+    <view class="steps-left">
+      <view class="font24">{{item.time[1]}}</view>
+      <view class="font24">{{item.time[0]}}</view>
+    </view>
+    <view class="line" wx:if="{{index !== infomsg.data.length-1}}"></view>
+    <view class="steps-right font28">
+      <view class=" {{index==0?'big':''}}"></view>
+      <text>{{item.context}}</text>
+    </view>
+  </view>
+</view>

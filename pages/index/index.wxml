@@ -1,0 +1,114 @@
+<view class="infomsg borbot">
+  <view class="infomsg-tem flexbet">
+    <view class="infomsg-tem-tit font24">寄</view>
+    <view class="infomsg-tem-info flexbet borbot">
+      <view class="msghint font28" bindtap="newadded" data-type="1" wx:if="{{!username}}">请填写发件人信息（发货地）</view>
+      <view class="msghint font28" bindtap="newadded" data-type="1" wx:else>
+        <view class="flexbet peoples">
+          <view class="font28" style="color:#212121;">{{username}}</view>
+          <view class="font28" style="color:#212121;">{{usertell}}</view>
+        </view>
+        <view class="peoplesaddress">{{useraddress}}</view>
+      </view>
+      <view class="icons" bindtap="addresslist" data-type="1">
+        <image src="../images/myimg.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="infomsg-tem flexbet">
+    <view class="infomsg-tem-tit font24" style="background: #F06261;">收</view>
+    <view class="infomsg-tem-info flexbet">
+      <view class="msghint font28" bindtap="newadded" data-type="2" wx:if="{{!susername}}">请填写收件人信息（收货地）</view>
+      <view class="msghint font28" bindtap="newadded" data-type="2">
+        <view class="flexbet peoples">
+          <view class="font28" style="color:#212121;">{{susername}}</view>
+          <view class="font28" style="color:#212121;">{{stell}}</view>
+        </view>
+        <view class="peoplesaddress">{{suseraddress}}</view>
+      </view>
+      <view class="icons" bindtap="addresslist" data-type="2">
+        <image src="../images/myimg.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="groups borbot flexbet font28 infomsg">
+  <view class="groups-tit">物品信息</view>
+  <view class="picker {{goods!==''?'empty':''}}" bindtap="checkgood">
+    <text wx:if="{{goods!==''}}">{{goods}} {{weights}} 公斤</text>
+    <text wx:else>请选择物品信息</text>
+  </view>
+</view>
+<view class="groups borbot flexbet font28 infomsg">
+  <view class="groups-tit">快递公司</view>
+  <picker mode="selector" value="{{comp}}" range="{{complist}}" class="picker" bindchange="selcomp" disabled>
+    <view class="{{comp!==''?'empty':''}}">{{comp!==''?complist[comp]:'请选择快递公司'}}</view>
+  </picker>
+</view>
+<view class="groups borbot flexbet font28 infomsg">
+  <view class="groups-tit">期望上门时间</view>
+  <view class="picker {{datatimetext!==''?'empty':''}}" bindtap="seldatetime">
+    <text wx:if="{{datatimetext === ''}}">请选择</text>
+    <text wx:else>{{datatimetext}}</text>
+  </view>
+</view>
+<view class="groups borbot flexbet font28 infomsg">
+  <checkbox-group  bindchange="isagree">
+    <label class="checkbox">
+      <checkbox checked="{{isagree}}" color="#F06261" />我已经阅读并同意<text>《省省快递寄件服务协议》</text>
+    </label>
+  </checkbox-group>
+</view>
+<view class="placeorder">
+  <view class="placeorder-left font32" wx:if="{{!price}}">预估：<text>--元</text></view>
+  <view class="placeorder-left font32" wx:else>预估：<text>{{price}}元</text></view>
+  <view class="placeorder-right" bindtap="placeorder">下单</view>
+</view>
+<!-- 物品信息 -->
+<view class="goodspops" wx:if="{{goodspop}}">
+  <view class="goodsbox">
+    <view class="goodscontent flexbet">
+      <view class="font32">物品信息</view>
+      <image src="../images/close.png" bindtap="closegoodspop" data-type="goods"></image>
+    </view>
+    <view class="goods-type">
+      <view class="goods-type-title font30">物品类型（必填）</view>
+      <view class="typelist flexbet">
+        <view class="typeitem {{goods===item?'active':''}}" wx:for="{{goodslist}}" wx:key="index" bindtap="selitem" data-item="{{item}}">{{item}}</view>
+      </view>
+      <view class="goods-weight flexbet">
+        <view class="font30">预估重量</view>
+        <view class="weightbox">
+          <view bindtap="stypenum" data-type="minus">-</view>
+          <view>{{weights}}公斤</view>
+          <view bindtap="stypenum" data-type="add">+</view>
+        </view>
+      </view>
+      <view class="goodshint font24">实际重量以快递员确定为准</view>
+      <view class="submit font30" bindtap="confirmgoods">完成</view>
+    </view>
+  </view>
+</view>
+<!-- 期望上门时间 -->
+<view class="goodspops" wx:if="{{isdatetime}}">
+  <view class="goodsbox">
+    <view class="goodscontent flexbet">
+      <view class="font32">期望上门时间</view>
+      <image src="../images/close.png" bindtap="closegoodspop" data-type="time"></image>
+    </view>
+    <view class="font30 timehint">请至少提前一小时预约上门时间，若是紧急件请与快递员沟通，实际上门时间以协商后为准</view>
+    <view class="timepicker">
+      <picker-view value="{{value}}" indicator-style="height: 50px;"
+        style="width: 100%; height: 180px;line-height: 50px;" bindchange="bindChange">
+        <picker-view-column>
+          <view wx:for="{{dates}}" wx:key="{{item.value}}" style="line-height: 50px;padding-left:50px;">{{item.label}}
+          </view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{value[0]==0?daytime:timelists}}" wx:key="{{item}}" style="line-height: 50px;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+    <view class="submit font30" bindtap="confirmdatetime">完成</view>
+  </view>
+</view>

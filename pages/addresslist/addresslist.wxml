@@ -1,0 +1,30 @@
+<view class="address-search flexbet">
+  <view class="search-input font28"><input type="text" bindinput="searchinput" placeholder="请输入姓名/手机号查询" /></view>
+  <view class="search-btn font28">搜索</view>
+</view>
+<view class="addresslist">
+  <view class="addressitem" wx:for="{{addresslist}}" wx:key="{{index}}">
+    <view bindtap="getaddress" data-dex="{{index}}">
+      <view class="infomsg font32">{{item.user_name}} {{item.phone}}</view>
+      <view class="addressmsg font26">{{item.areas}}</view>
+    </view>
+    <view class="addresssel">
+      <view class="sel-checkout" bindtap="defaultadd" data-dex="{{index}}">
+        <text wx:if="{{item.is_default == 0}}"></text>
+        <icon wx:else type="success" size="24"></icon>
+        <text>设为默认寄件地址</text>
+      </view>
+      <view class="operationbox">
+        <view class="operation" bindtap="editbtn" data-id="{{item.address_id}}">
+          <image src="../images/edit.png"></image>
+          <text>编辑</text>
+        </view>
+        <view class="operation" bindtap="remove" data-dex="{{index}}">
+          <image src="../images/delete.png"></image>
+          <text>删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="addressadd" bindtap="newadded">+ 新增地址</view>
