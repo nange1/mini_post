@@ -48,6 +48,11 @@ Page({
       url: `${http.URLS}/orderList?u_token=${token}&order_status=${that.data.tabdex}`,
       method:'get',
       success(res){
+        if(res.data.code==27){
+          wx.clearStorage('token')
+          wx.clearStorage('phone')
+          wx.navigateBack()
+        }
         if(res.data.code == 1){
           res.data.data.rows.map(ele=>{
             ele.from_address = ele.from_address.split('市')[0]+'市'

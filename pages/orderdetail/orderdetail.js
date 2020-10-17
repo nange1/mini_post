@@ -34,6 +34,11 @@ Page({
           u_token: token
         },
         success(res){
+          if(res.data.code==27){
+            wx.clearStorage('token')
+            wx.clearStorage('phone')
+            wx.navigateBack()
+          }
           if(res.data.status == 200){
             res.data.data.map(ele=>{
               ele.time = ele.time.split(" ")

@@ -100,6 +100,10 @@ Page({
               key:"token",
               data:res.data.data.token
             })
+            wx.setStorage({
+              key:"phone",
+              data:res.data.data.phone
+            })
             wx.switchTab({
               url: '../index/index',
             })
@@ -124,6 +128,11 @@ Page({
             method:'POST',
             data:{code:res.code},
             success(res){
+              if(res.data.code==27){
+                wx.clearStorage('token')
+                wx.clearStorage('phone')
+                wx.navigateBack()
+              }
               if(res.data.data.openid){
                 that.setData({
                   openid: res.data.data.openid
@@ -140,6 +149,12 @@ Page({
    */
   onLoad: function (options) {
     this.login()
+    let token = wx.getStorageSync('token')
+    if(token){
+      wx.switchTab({
+        url: '../index/index',
+      })
+    }
   },
 
   /**

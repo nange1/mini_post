@@ -26,6 +26,11 @@ Page({
         weight
       },
       success(res){
+        if(res.data.code==27){
+          wx.clearStorage('token')
+          wx.clearStorage('phone')
+          wx.navigateBack()
+        }
         if(res.data.code == 1){
           that.setData({
             price:res.data.price
@@ -86,6 +91,11 @@ Page({
         is_default:list[e.currentTarget.dataset.dex].is_default
       },
       success(res){
+        if(res.data.code==27){
+          wx.clearStorage('token')
+          wx.clearStorage('phone')
+          wx.navigateBack()
+        }
         console.log(res)
       }
     })
@@ -108,6 +118,11 @@ Page({
               address_id:list[e.currentTarget.dataset.dex].address_id,
             },
             success(res){
+              if(res.data.code==27){
+                wx.clearStorage('token')
+                wx.clearStorage('phone')
+                wx.navigateBack()
+              }
               console.log(res)
               if(res.data.code == 1){
                 list.splice(dex,1)
@@ -141,6 +156,7 @@ Page({
   onLoad: function (options) {
     let that = this
     let token = ''
+    console.log(options)
     wx.getStorage({
       key: 'token',
       success(res){
@@ -150,6 +166,11 @@ Page({
           method:'post',
           data:{u_token:token},
           success(res){
+            if(res.data.code==27){
+              wx.clearStorage('token')
+              wx.clearStorage('phone')
+              wx.navigateBack()
+            }
             if(res.data.code == 1){
               that.setData({
                 addresslist: res.data.data

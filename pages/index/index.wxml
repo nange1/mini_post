@@ -101,11 +101,11 @@
       <picker-view value="{{value}}" indicator-style="height: 50px;"
         style="width: 100%; height: 180px;line-height: 50px;" bindchange="bindChange">
         <picker-view-column>
-          <view wx:for="{{dates}}" wx:key="{{item.value}}" style="line-height: 50px;padding-left:50px;">{{item.label}}
+          <view wx:for="{{dates}}" wx:key="value" style="line-height: 50px;padding-left:50px;">{{item.label}}
           </view>
         </picker-view-column>
         <picker-view-column>
-          <view wx:for="{{value[0]==0?daytime:timelists}}" wx:key="{{item}}" style="line-height: 50px;">{{item}}</view>
+          <view wx:for="{{value[0]==0?daytime:timelists}}" wx:key="item" style="line-height: 50px;">{{item}}</view>
         </picker-view-column>
       </picker-view>
     </view>

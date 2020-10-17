@@ -3,7 +3,7 @@
   <view class="search-btn font28">搜索</view>
 </view>
 <view class="addresslist">
-  <view class="addressitem" wx:for="{{addresslist}}" wx:key="{{index}}">
+  <view class="addressitem" wx:for="{{addresslist}}" wx:key="index">
     <view bindtap="getaddress" data-dex="{{index}}">
       <view class="infomsg font32">{{item.user_name}} {{item.phone}}</view>
       <view class="addressmsg font26">{{item.areas}}</view>

@@ -1,7 +1,7 @@
 const app = getApp();
 const utils = require("../../utils/util");
 const http = require('../../utils/http')
-Page({
+Page(http.checkLogin({
 
   /**
    * 页面的初始数据
@@ -89,6 +89,11 @@ Page({
           weight:that.data.weights
         },
         success(res){
+          if(res.data.code==27){
+            wx.clearStorage('token')
+            wx.clearStorage('phone')
+            wx.navigateBack()
+          }
           // if(res.data.code == 1){
             that.setData({
               price:res.data.price?res.data.price:'--',
@@ -181,6 +186,11 @@ Page({
           u_token: that.data.token
         },
         success(res){
+          if(res.data.code==27){
+            wx.clearStorage('token')
+            wx.clearStorage('phone')
+            wx.navigateBack()
+          }
           if(res.data.code == 1){
             wx.showToast({
               title: '下单成功',
@@ -306,4 +316,4 @@ Page({
   onShareAppMessage: function () {
     
   }
-})
+}))

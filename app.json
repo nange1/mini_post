@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/login/login",
+    "pages/index/index",
     "pages/my/my",
     "pages/authentication/authentication",
     "pages/orderlist/orderlist",
@@ -14,7 +14,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F06261",
-    "navigationBarTitleText": "省省快递",
+    "navigationBarTitleText": "安辛寄快递",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -34,6 +34,11 @@
         "selectedIconPath": "pages/images/tab2.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置将用于设置默认出发地点"
+    }
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

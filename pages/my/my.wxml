@@ -1,6 +1,6 @@
 <view class="userInfo flexbet">
   <image src="../images/moren.png" mode="cover" class="userinfo-avatar"></image>
-  <view class="font28">17635337512</view>
+  <view class="font28">{{userInfo}}</view>
 </view>
 <view class="lists">
   <view class="lists-item" bindtap="orderlist">我的订单</view>

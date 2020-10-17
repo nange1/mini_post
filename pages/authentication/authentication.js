@@ -104,6 +104,11 @@ Page({
           ID_num: e.detail.value.idcard
         },
         success(res){
+          if(res.data.code==27){
+            wx.clearStorage('token')
+            wx.clearStorage('phone')
+            wx.navigateBack()
+          }
           console.log(res)
         }
       })

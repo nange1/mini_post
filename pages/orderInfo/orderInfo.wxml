@@ -47,3 +47,4 @@
   </view>
 </view>
 <view class="btn" bindtap="getdetail" data-num="{{orderInfo.poster_num}}">查看物流</view>
+<view class="btn" bindtap="paymonery" data-num="{{orderInfo.poster_num}}" style="margin-top:50rpx;">去支付</view>

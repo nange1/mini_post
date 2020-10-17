@@ -1,6 +1,6 @@
 const app = getApp();
 const http = require('../../utils/http')
-Page({
+Page(http.checkLogin({
   /**
    * 页面的初始数据
    */
@@ -83,6 +83,11 @@ Page({
           point:self.data.types == 1?self.data.tolocation:self.data.formlocation
         },
         success(res){
+          if(res.data.code==27){
+            wx.clearStorage('token')
+            wx.clearStorage('phone')
+            wx.navigateBack()
+          }
           const pages = getCurrentPages();
           const prevpage = pages[pages.length - 2]
           if(self.data.types == 1){
@@ -126,6 +131,11 @@ Page({
         weight
       },
       success(res){
+        if(res.data.code==27){
+          wx.clearStorage('token')
+          wx.clearStorage('phone')
+          wx.navigateBack()
+        }
         if(res.data.code == 1){
           that.setData({
             price:res.data.price
@@ -154,6 +164,11 @@ Page({
               u_token: that.data.token
             },
             success(res){
+              if(res.data.code==27){
+                wx.clearStorage('token')
+                wx.clearStorage('phone')
+                wx.navigateBack()
+              }
               if(res.data.code == 1){
                 that.setData({
                   uname:res.data.data.user_name,
@@ -176,4 +191,4 @@ Page({
     })
   },
 
-})
+}))

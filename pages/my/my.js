@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      userInfo: app.globalData.userInfo
+      userInfo: wx.getStorageSync('phone')
     })
   },
   tellphont(){
@@ -38,8 +38,12 @@ Page({
     })
   },
   exit(){
-    wx.reLaunch({
-      url: '../login/login',
+    wx.clearStorage({
+      success: (res) => {
+        wx.reLaunch({
+          url: '../login/login',
+        })
+      },
     })
   },
   addresslist(){

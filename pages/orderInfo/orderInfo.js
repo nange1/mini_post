@@ -23,6 +23,11 @@ Page({
         url: `${http.URLS}/orderDetail?order_id=${options.id}&u_token=${token}`,
         method:'GET',
         success(res){
+          if(res.data.code==27){
+            wx.clearStorage('token')
+            wx.clearStorage('phone')
+            wx.navigateBack()
+          }
           if(res.data.code == 1){
             that.setData({
               orderInfo: res.data.data
@@ -32,7 +37,17 @@ Page({
       })
     }
   },
-
+  paymonery(){
+    wx.requestPayment({
+      timeStamp: '',
+      nonceStr: '',
+      package: '',
+      signType: 'MD5',
+      paySign: '',
+      success (res) { },
+      fail (res) { }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
